@@ -55,6 +55,20 @@ class DeliveriesController < ApplicationController
     end
   end
 
+  def received
+    the_id = params.fetch("path_id")
+    the_delivery = Delivery.where({ :id => the_id }).at(0)
+
+    the_delivery.received = params.fetch("query_received")
+
+    if the_delivery.valid?
+      the_delivery.save
+      redirect_to("/deliveries", { :notice => "Delivery received."} )
+    else
+      redirect_to("/deliveries", { :alert => the_delivery.errors.full_messages.to_sentence })
+    end
+  end
+
   def destroy
     the_id = params.fetch("path_id")
     the_delivery = Delivery.where({ :id => the_id }).at(0)

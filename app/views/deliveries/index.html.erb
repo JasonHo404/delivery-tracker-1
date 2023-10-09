@@ -70,10 +70,9 @@
             </div>
 
             <div>
-              <form action="/modify_delivery/<%=delivery.id%>" method="post">
-                <input type="hidden" name="query_received" value="true">
-
-                <button>Mark as received</button>
+              <form action="/received/<%=delivery.id%>" method="post">
+                <input type="hidden" name="query_received" value="true">   
+                <button>Mark as received</button> 
               </form>
             </div>
             

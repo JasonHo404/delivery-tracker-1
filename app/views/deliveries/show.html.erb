@@ -114,7 +114,7 @@
       </div>
 
       <div>
-        <input type="checkbox" id="received_box" name="query_received" value="1" <%= "checked" if @the_delivery.received %>>
+        <input type="checkbox" id="received_box" name="query_received" value="false" <%= "checked" if @the_delivery.received = true %>>
 
         <label for="received_box">
             Received
