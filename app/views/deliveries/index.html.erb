@@ -3,6 +3,9 @@
     <h1>
       Delivery Tracker
     </h1>
+    <p>
+      Know if something gets lost in the mail.
+    </p>
   </div>
 </div>
 
@@ -11,8 +14,10 @@
 <div>
   <div>
     <h2>
-      Add a new delivery
+      Expecting a package?
     </h2>
+
+    
 
     <form action="/insert_delivery" method="post">
       <div>
@@ -29,7 +34,7 @@
 
       <div>
         <label for="expected_box">
-          Expected
+          Supposed to arrive on
         </label>
 
         <input type="date" id="expected_box" name="query_expected">
@@ -40,7 +45,7 @@
           Details
         </label>
 
-        <textarea id="details_box" name="query_details" rows="3"></textarea>
+        <textarea id="detail_box" name="query_details" rows="3"></textarea>
       </div>
 
       <button>
